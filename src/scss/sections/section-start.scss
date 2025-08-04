@@ -3,8 +3,12 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 59.76px;
-    padding-bottom: 102.84px;
+    padding: 59.76px 0 102.84px 0;
+
+    @media (max-width: 425px) {
+        background-image: url(../img/sections/section-start/image-bg.png);
+        padding: 61px 0;
+    }
 
     &__container {
         border-radius: 12.459px;
@@ -16,12 +20,27 @@
         margin: 0 auto;
         padding: 55.35px 79px 56.71px 79px;
         position: relative;
+
+        @media (max-width: 425px) {
+            max-width: 338px;;
+            border-radius: 12.459px;
+            border: 0.779px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(77.86947631835938px);
+            padding: 32px 24px 31.23px 37px;
+        }
     }
 
     &__img {
         position: absolute;
         right: 24px;
         bottom: -62px;
+
+        @media (max-width: 425px) {
+            width: 175px;
+            height: 125px;
+            top: -46px;
+            right: -25px;
+        }
     }
 
     &__title {
@@ -31,6 +50,13 @@
         font-weight: 700;
         line-height: 69.6px;
         text-transform: uppercase;
+
+        @media (max-width: 425px) {
+            font-size: 33px;
+            max-width: 247px;
+            line-height: 39.6px;
+            margin-bottom: 5px;
+        }
     }
 
     &__text {
@@ -40,6 +66,11 @@
         font-weight: 400;
         line-height: normal;
         max-width: 514px;
+
+        @media (max-width: 425px) {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
     }
 
     &__btn {
@@ -64,6 +95,19 @@
         &:hover {
             background-color: #DFCA8F;
             color: #101010;
+        }
+
+        @media (max-width: 425px) {
+            width: 227px;
+            height: 60.766px;
+            padding: 13.271px 36.32px;
+            gap: 6.985px;
+            border-radius: 8.99px;
+            border: 0.698px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(34.923072814941406px);
+            color: #FFF;
+            font-size: 21.351px;
+            font-weight: 700;
         }
     }
 }

@@ -6,7 +6,7 @@ $(document).ready(function () {
         const targetElement = $(targetId);
 
         if (targetElement.length) {
-            const targetOffset = targetElement.offset().top;
+            const targetOffset = targetElement.offset().top - 20;
 
             $('html, body').animate({
                 scrollTop: targetOffset
@@ -22,34 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".partners__slider");
     const clone = slider.innerHTML;
     slider.innerHTML += clone;
-
-    const images = slider.querySelectorAll("img");
-
-    const wrapper = document.querySelector(".partners__slider-wrapper");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const img = entry.target;
-
-            if (entry.isIntersecting) {
-                img.classList.add("fade-zoom-in");
-            } else {
-                const imgRect = img.getBoundingClientRect();
-                const wrapperRect = wrapper.getBoundingClientRect();
-
-                // Перевіряємо, що картинка повністю вийшла за лівий край wrapper
-                if (imgRect.right < wrapperRect.left) {
-                    img.classList.remove("fade-zoom-in");
-                }
-            }
-        });
-    }, {
-        root: wrapper,
-        threshold: 0.5,
-    });
-
-    images.forEach(img => observer.observe(img));
 });
+
 
 const $accordionItems = $('.faq__list-item');
 const $allIcons = $('.faq__list-icon-wrapper .faq__list-icon');
@@ -81,4 +55,9 @@ $accordionItems.on('click keydown', function (e) {
                 .animate({ opacity: 1 }, 400);
         }
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const aboutImg = document.querySelector('.about__img');
+    aboutImg.classList.add('animate');
 });

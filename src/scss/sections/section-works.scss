@@ -1,6 +1,11 @@
 .works {
-    padding: 115.91px 0 81.68px;
+    padding: 115.91px 0 81.68px 0;
     margin-top: -427px;
+
+    @media (max-width: 425px) {
+        margin-top: 0;
+        padding: 50px 0 56.23px 0;
+    }
 
     &__container {
         max-width: 1265.44px;
@@ -15,6 +20,11 @@
         line-height: 58px;
         text-transform: uppercase;
         margin-bottom: 44.26px;
+
+        @media (max-width: 425px) {
+            font-size: 33px;
+            margin-bottom: 38px;
+        }
     }
 
     &__grid {
@@ -23,6 +33,13 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 53.84px;
         position: relative;
+
+        @media (max-width: 425px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
     }
 
     &__block {
@@ -33,17 +50,51 @@
         width: 385.437px;
         height: 211.948px;
 
+        @media (max-width: 425px) {
+            width: 296.227px;
+            height: auto;
+            border-radius: 7.891px;
+            border: 0.658px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 3.945px 21.042px 0 rgba(0, 0, 0, 0.15);
+
+            &:nth-child(1) {
+                order: 1;
+            }
+
+            &:nth-child(2) {
+                order: 2;
+            }
+
+            &:nth-child(3) {
+                order: 4;
+            }
+
+            &:nth-child(4) {
+                order: 5;
+            }
+
+            &:nth-child(5) {
+                order: 6;
+            }
+        }
+
         &-header {
             border-radius: 10.256px;
             box-shadow: 0 0 0 2px #331112;
             background-color: #331112;
             display: flex;
             align-items: center;
-            padding: 0 17.09px;
+            padding: 0 0 0 17.09px;
             width: 100%;
             height: 101.701px;
             gap: 20.5px;
             margin-bottom: 21.37px;
+
+            @media (max-width: 425px) {
+                width: 296.563px;
+                height: 78.251px;
+                border-radius: 7.891px;
+            }
         }
 
         &-number {
@@ -52,6 +103,10 @@
             font-weight: 700;
             line-height: normal;
             opacity: .3;
+
+            @media (max-width: 425px) {
+                font-size: 40.112px;
+            }
         }
 
         &-title {
@@ -59,6 +114,10 @@
             font-size: 34.185px;
             font-weight: 700;
             line-height: normal;
+
+            @media (max-width: 425px) {
+                font-size: 26.303px;
+            }
         }
 
         &-text {
@@ -67,6 +126,12 @@
             font-weight: 400;
             line-height: normal;
             padding-left: 35.89px;
+            max-width: 345px;
+
+            @media (max-width: 425px) {
+                padding: 0 23px 17px 20px;
+                font-size: 15.124px;
+            }
         }
     }
 
@@ -75,6 +140,17 @@
         top: -130px;
         left: 0;
         right: 0;
+        animation: bounceY 2.4s ease-out infinite;
+
+        @media (max-width: 425px) {
+            top: -90px;
+            left: 50%;
+            right: unset;
+            animation: none;
+            transform: translateX(-50%);
+            width: 239px;
+            height: 239px;
+        }
 
         &-wrapper {
             grid-column: 2;
@@ -82,6 +158,13 @@
             z-index: 10;
             pointer-events: none;
             position: relative;
+
+            @media (max-width: 425px) {
+                order: 3;
+                position: relative;
+                z-index: -1;
+                margin-bottom: 70px;
+            }
         }
     }
 
@@ -111,5 +194,31 @@
             background-color: transparent;
             color: #FFF;
         }
+
+        @media (max-width: 425px) {
+            margin-top: 40px;
+            width: 227px;
+            height: 60.766px;
+            padding: 13.271px 36.32px;
+            gap: 6.985px;
+            border-radius: 8.99px;
+            border: 0.698px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(34.923072814941406px);
+            font-size: 21.351px;
+        }
     }
+}
+
+@keyframes bounceY {
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(-2px); }
+    20%  { transform: translateY(-4px); }
+    30%  { transform: translateY(-7px); }
+    40%  { transform: translateY(-9px); }
+    50%  { transform: translateY(-10px); }
+    60%  { transform: translateY(-7px); }
+    70%  { transform: translateY(-4px); }
+    80%  { transform: translateY(-2px); }
+    90%  { transform: translateY(-1px); }
+    100% { transform: translateY(0); }
 }
