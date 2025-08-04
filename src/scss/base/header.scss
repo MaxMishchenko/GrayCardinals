@@ -10,8 +10,17 @@
     padding-right: 14.6%;
 
     @media (max-width: 425px) {
-        padding: 0 60px;
-        top: 30px;
+        padding: 12px 30px;
+        top: 0;
+        position: fixed;
+        transition: background-color .4s;
+        pointer-events: all;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+
+        &.open {
+            background-color: #101010;
+        }
     }
 
     &__wrapper {
@@ -111,9 +120,103 @@
             }
 
             &-logo {
-                color: #FFF;
-                font-size: 32.607px;
-                font-weight: 700;
+                display: flex;
+            }
+        }
+
+        &-menu {
+            background-color: #101010;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 74px;
+            width: 100%;
+            height: calc(100dvh - 74px);
+            transform: translateY(-100dvh);
+            transition: .6s;
+            z-index: 990;
+            pointer-events: all;
+            gap: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #ffffff0d;
+
+            &.open {
+                transform: translateY(0);
+            }
+
+            .header__nav-list {
+                flex-direction: column;
+                text-transform: uppercase;
+            }
+
+            .header__links {
+                flex-direction: column;
+            }
+        }
+
+        &-burger {
+            width: 35px;
+            height: 32px;
+            position: relative;
+
+            &:before,
+            span,
+            &:after {
+                width: 100%;
+                height: 4px;
+                display: block;
+                background: #fff;
+                border-radius: 2px;
+                position: absolute;
+                opacity: 1;
+            }
+
+            &:before,
+            &:after {
+                transition: top .35s cubic-bezier(.23,1,.32,1),
+                transform .35s cubic-bezier(.23,1,.32,1),
+                opacity .35s cubic-bezier(.23,1,.32,1),
+                background-color 1.15s cubic-bezier(.86,0,.07,1);
+                content: "";
+            }
+
+            &:before {
+                top: 4px;
+            }
+
+            span {
+                top: 15px;
+            }
+
+            &:after {
+                top: 26px;
+            }
+
+            &.cross {
+                span {
+                    opacity: 0;
+                }
+
+                &:before,
+                &:after {
+                    top: 40%;
+                }
+
+                &:before {
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &:focus {
+                outline: none;
             }
         }
     }
