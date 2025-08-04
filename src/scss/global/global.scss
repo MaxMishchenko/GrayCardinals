@@ -1,0 +1,33 @@
+* {
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    font-smooth: always;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #101010;
+
+    &.lock {
+        overflow: hidden;
+        pointer-events: none;
+    }
+}
+
+body, html {
+    overflow-x: clip;
+}
+
+.wrapper {
+    width: 1920px;
+    transform-origin: top left;
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        width: 100%;
+        transform: none !important;
+    }
+}

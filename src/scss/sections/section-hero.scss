@@ -1,0 +1,91 @@
+.hero {
+    background-image: url(../img/sections/section-hero/image-coins.webp);
+    background-position: -80px -255px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__content {
+        backdrop-filter: blur(10px);
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &-img {
+            max-width: 1382px;
+            width: 100%;
+            height: auto;
+        }
+
+        &-text {
+            border-radius: 13.674px;
+            border: 0.855px solid rgba(255, 255, 255, 0.15);
+            background-color: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(30px);
+            max-width: 758px;
+            padding: 34px 75px 44px 62px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        &-wrapper {
+            position: absolute;
+            left: 50%;
+            transform: translate(-19%,-39%);
+        }
+
+        &-title {
+            color: #DFCA8F;
+            font-size: 58px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            line-height: 58px;
+        }
+
+        &-subtitle {
+            color: #FFF;
+            font-size: 27.348px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-btn {
+            display: flex;
+            width: 289.719px;
+            height: 77.555px;
+            padding: 16.937px 46.355px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-left: 20px;
+            border-radius: 11.474px;
+            border: 0.891px solid rgba(255, 255, 255, 0.15);
+            background-color: #331112;
+            color: #FFF;
+            font-size: 27.251px;
+            font-weight: 700;
+            line-height: normal;
+            transition: .4s;
+
+            &:hover {
+                background-color: #DFCA8F;
+                color: #101010;
+            }
+        }
+    }
+
+    &__anchor {
+        position: absolute;
+        bottom: 323px;
+        right: 543px;
+        z-index: 99;
+        backdrop-filter:blur(42.73px);
+        border-radius: 50%;
+        overflow: clip;
+    }
+}

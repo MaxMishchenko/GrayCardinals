@@ -1,0 +1,50 @@
+.partners {
+    background: #331112;
+    padding: 32.2px 0;
+    text-align: center;
+    overflow: hidden;
+
+    &__title {
+        color: #DFCA8F;
+        font-size: 55.551px;
+        font-weight: 700;
+        margin-bottom: 40.46px;
+    }
+
+    &__slider-wrapper {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    &__slider {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        animation: scrollLoop 30s linear infinite;
+
+        img {
+            margin: 0 27.06px;
+            flex-shrink: 0;
+            animation: fadeZoom 0.6s ease forwards;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+    }
+
+    @keyframes scrollLoop {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes fadeZoom {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}

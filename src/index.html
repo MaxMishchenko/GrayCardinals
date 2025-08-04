@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    @include('partials/global/head.html')
+
+    <link rel="preload" as="image" href="./img/sections/section-hero/image-raven.webp">
+
+    <script>
+        (function () {
+            const baseWidth = 1920;
+            const currentWidth = window.innerWidth;
+            const scale = currentWidth > 425 ? currentWidth / baseWidth : 1;
+
+            document.write(`
+            <style>
+                .wrapper {
+                    transform: scale(${scale});
+                    transform-origin: top left;
+                }
+            </style>
+        `);
+        })();
+    </script>
+</head>
+<title>Gray Cardinals</title>
+<body>
+@include('partials/global/sprite.html')
+
+<div class="wrapper">
+    @include('partials/global/header.html')
+
+    <main>
+        @include('partials/main/sections/section-hero.html')
+        @include('partials/main/sections/section-about.html')
+        @include('partials/main/sections/section-works.html')
+        @include('partials/main/sections/section-partners.html')
+        @include('partials/main/sections/section-start.html')
+        @include('partials/main/sections/section-faq.html')
+    </main>
+</div>
+
+<script defer src="./js/jquery.js"></script>
+<script defer src="./js/main.js?v=1.0"></script>
+<script>
+    function scaleContent() {
+        const baseWidth = 1920;
+        const currentWidth = window.innerWidth;
+        const wrapper = document.querySelector('.wrapper');
+
+        if (currentWidth > 425) {
+            const scale = currentWidth / baseWidth;
+            wrapper.style.transform = `scale(${scale})`;
+        } else {
+            wrapper.style.transform = 'none';
+        }
+    }
+
+    window.addEventListener('resize', scaleContent);
+    window.addEventListener('load', scaleContent);
+</script>
+<script src="./js/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

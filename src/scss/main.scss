@@ -1,0 +1,13 @@
+@import 'global/nullstyle';  ;
+@import 'global/global';
+
+// BASE
+@import 'base/header';
+
+// SECTIONS
+@import 'sections/section-hero';
+@import 'sections/section-about';
+@import 'sections/section-works';
+@import 'sections/section-partners';
+@import 'sections/section-start';
+@import 'sections/section-faq';

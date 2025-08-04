@@ -1,0 +1,163 @@
+.faq {
+    padding-top: 55px;
+    position: relative;
+    overflow-y: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        background-image: url(../img/sections/section-faq/image-coin-bottom.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: 712.48px;
+        height: 572.59px;
+        z-index: -1;
+    }
+
+    &__container {
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        color: #DFCA8F;
+        text-align: center;
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 58px;
+        margin-bottom: 46.72px;
+    }
+
+    &__wrapper {
+        max-width: 1091px;
+        margin: 0 auto;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -58px;
+            left: -333px;
+            background-image: url(../img/sections/section-faq/image-coin-top.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 498.45px;
+            height: 400.58px;
+            z-index: -1;
+        }
+    }
+
+    &__list {
+        display: grid;
+        gap: 15px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12.7px;
+            border-radius: 12.459px;
+            border: 0.779px solid rgba(255, 255, 255, 0.15);
+            background-color: rgba(32, 32, 32, 0.10);
+            backdrop-filter: blur(77.86947631835938px);
+            padding: 27px 28px 27px 65px;
+        }
+
+        &-title {
+            color: #FFF;
+            font-size: 32.476px;
+            font-weight: 700;
+            line-height: 38.971px;
+        }
+
+        &-text {
+            color: #DFCA8F;
+            font-size: 22.22px;
+            font-weight: 400;
+            line-height: 26.664px;
+            max-width: 651px;
+            display: none;
+        }
+
+        &-icon {
+            transition: .4s;
+
+            &-wrapper {
+                width: 59.824px;
+                height: 56.234px;
+                background-color: #331112;
+                border: 0.779px solid rgba(255, 255, 255, 0.15);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.open {
+                transform: rotate(180deg);
+            }
+        }
+
+        &-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__footer {
+        max-width: 842px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        &-nav {
+            border-radius: 14.574px 14.574px 0 0;
+            border-top: 0.911px solid rgba(255, 255, 255, 0.15);
+            border-left: 0.911px solid rgba(255, 255, 255, 0.15);
+            border-right: 0.911px solid rgba(255, 255, 255, 0.15);
+            background-color: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(22.77202796936035px);
+            padding: 26.78px 0;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            gap: 20.91px;
+        }
+
+        &-title {
+            color: #FFF;
+            font-size: 24.427px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 20.91px;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 5.16px;
+            }
+        }
+
+        &-link {
+            color: #DFCA8F;
+            font-size: 24.427px;
+            font-weight: 700;
+            line-height: normal;
+            transition: .4s;
+
+            &:hover {
+                color: #FFF;
+            }
+        }
+    }
+}
