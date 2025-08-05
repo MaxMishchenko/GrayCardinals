@@ -1,24 +1,5 @@
 $(document).ready(function () {
-    $('a[href^="#"]').on('click', function (event) {
-        event.preventDefault();
 
-        const targetId = $(this).attr('href');
-        const targetElement = $(targetId);
-
-        if (targetElement.length) {
-            if (window.innerWidth <= 425) {
-                targetOffset = targetElement.offset().top - 94;
-            } else {
-                targetOffset = targetElement.offset().top - 20;
-            }
-
-            $('html, body').animate({
-                scrollTop: targetOffset
-            }, 600, function () {
-                targetElement.attr('tabindex', '-1').focus();
-            });
-        }
-    });
 
     //Slider
     const slider = document.querySelector(".partners__slider");

@@ -138,11 +138,15 @@
             z-index: 990;
             pointer-events: all;
             gap: 45px;
-            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-top: 1px solid #ffffff0d;
+            display: none;
+
+            @media (max-width: 425px) {
+                display: flex;
+            }
 
             &.open {
                 transform: translateY(0);
