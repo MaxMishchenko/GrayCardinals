@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 59.76px 0 102.84px 0;
+    overflow-x: hidden;
 
     @media (max-width: 425px) {
         background-image: url(../img/sections/section-start/image-bg.png);

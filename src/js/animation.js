@@ -3,11 +3,14 @@ let isAOSInitialized = false;
 let animatedElements = new Set();
 let isScrolling = false;
 let scrollTimeout;
+let resizeObserver;
 
 function scaleContentAndAdjustAOS() {
     const baseWidth = 1920;
     const currentWidth = window.innerWidth;
     const wrapper = document.querySelector('.wrapper');
+
+    if (resizeObserver) resizeObserver.disconnect();
 
     if (currentWidth > 425) {
         currentScale = currentWidth / baseWidth;
@@ -15,12 +18,13 @@ function scaleContentAndAdjustAOS() {
         wrapper.style.transformOrigin = 'top left';
         wrapper.style.width = '1920px';
 
-        const wrapperHeight = wrapper.scrollHeight;
-        const scaledHeight = wrapperHeight * currentScale;
-        document.body.style.height = `${scaledHeight}px`;
+        updateBodyHeight(wrapper);
 
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'auto';
+
+        // Observe wrapper height changes
+        observeWrapperResize(wrapper);
 
         initAOSWithCorrectOffset();
     } else {
@@ -34,6 +38,20 @@ function scaleContentAndAdjustAOS() {
 
         initSimpleMobileAOS();
     }
+}
+
+function updateBodyHeight(wrapper) {
+    const wrapperHeight = wrapper.scrollHeight;
+    const scaledHeight = wrapperHeight * currentScale;
+    document.body.style.height = `${scaledHeight}px`;
+}
+
+function observeWrapperResize(wrapper) {
+    resizeObserver = new ResizeObserver(() => {
+        updateBodyHeight(wrapper);
+        AOS.refresh();
+    });
+    resizeObserver.observe(wrapper);
 }
 
 function getElementId(el) {
