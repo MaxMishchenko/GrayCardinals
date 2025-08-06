@@ -12,7 +12,7 @@ function scaleContentAndAdjustAOS() {
 
     if (resizeObserver) resizeObserver.disconnect();
 
-    if (currentWidth > 425) {
+    if (currentWidth > 480) {
         currentScale = currentWidth / baseWidth;
         wrapper.style.transform = `scale(${currentScale})`;
         wrapper.style.transformOrigin = 'top left';
@@ -113,7 +113,7 @@ function adjustOffsetsForScale() {
 
 function checkVisibleElementsOnce() {
     const winH = window.innerHeight;
-    const isMobile = window.innerWidth <= 425;
+    const isMobile = window.innerWidth <= 480;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
@@ -141,7 +141,7 @@ function handleScroll() {
 
 function scrollToElement(element) {
     const winH = window.innerHeight;
-    const isMobile = window.innerWidth <= 425;
+    const isMobile = window.innerWidth <= 480;
     if (isMobile) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
@@ -238,7 +238,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 function isMobile() {
-    return window.innerWidth <= 425;
+    return window.innerWidth <= 480;
 }
 
 setTimeout(() => {

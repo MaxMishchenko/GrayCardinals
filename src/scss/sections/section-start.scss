@@ -6,7 +6,7 @@
     padding: 59.76px 0 102.84px 0;
     overflow-x: hidden;
 
-    @media (max-width: 425px) {
+    @media (max-width: 480px) {
         background-image: url(../img/sections/section-start/image-bg.png);
         padding: 61px 0;
     }
@@ -22,7 +22,7 @@
         padding: 55.35px 79px 56.71px 79px;
         position: relative;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             max-width: 338px;;
             border-radius: 12.459px;
             border: 0.779px solid rgba(255, 255, 255, 0.15);
@@ -36,7 +36,7 @@
         right: 24px;
         bottom: -62px;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             width: 175px;
             height: 125px;
             top: -46px;
@@ -52,7 +52,7 @@
         line-height: 69.6px;
         text-transform: uppercase;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             font-size: 33px;
             max-width: 247px;
             line-height: 39.6px;
@@ -68,7 +68,7 @@
         line-height: normal;
         max-width: 514px;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             font-size: 15px;
             margin-bottom: 16px;
         }
@@ -98,7 +98,7 @@
             color: #101010;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             width: 227px;
             height: 60.766px;
             padding: 13.271px 36.32px;

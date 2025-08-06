@@ -9,7 +9,7 @@
     justify-content: right;
     padding-right: 14.6%;
 
-    @media (max-width: 425px) {
+    @media (max-width: 480px) {
         padding: 12px 30px;
         top: 0;
         position: fixed;
@@ -33,7 +33,7 @@
         backdrop-filter: blur(21.365678787231445px);
         display: inline-flex;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             display: none;
         }
     }
@@ -112,7 +112,7 @@
         &-nav {
             display: none;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -144,7 +144,7 @@
             border-top: 1px solid #ffffff0d;
             display: none;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 display: flex;
             }
 

@@ -20,7 +20,7 @@ body, html {
     transform-origin: top left;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .wrapper {
         width: 100%;
         transform: none !important;
@@ -64,7 +64,7 @@ body {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     [id] {
         scroll-margin-top: 80px;
     }

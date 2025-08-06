@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('partials/global/head.html')
-    <title>Grey Cardinals</title>
+    <title>Grey Cardinals — Private Network for Performance Buyers</title>
 
     <link rel="preload" as="image" href="./img/sections/section-hero/image-raven.webp">
 
@@ -10,7 +10,7 @@
         (function () {
             const baseWidth = 1920;
             const currentWidth = window.innerWidth;
-            const scale = currentWidth > 425 ? currentWidth / baseWidth : 1;
+            const scale = currentWidth > 480 ? currentWidth / baseWidth : 1;
 
             document.write(`
                 <style>
@@ -42,8 +42,8 @@
 </div>
 
 <script defer src="./js/jquery.js"></script>
-<script defer src="./js/main.js?v=2.0"></script>
+<script defer src="./js/main.js?v=2.1"></script>
 <script defer src="./js/aos.js"></script>
-<script defer src="./js/animation.js?v=2.0"></script>
+<script defer src="./js/animation.js?v=2.1"></script>
 </body>
 </html>

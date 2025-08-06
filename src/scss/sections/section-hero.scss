@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-size: auto;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             background-image: url(../img/sections/section-hero/image-coins-mobile.webp);
             background-position: top;
             background-size: contain;
@@ -37,7 +37,7 @@
         right: 347px;
         background-color: rgba(0, 0, 0, 0.01);
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             display: none;
         }
     }
@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
 
-        @media (max-width: 425px) {
+        @media (max-width: 480px) {
             flex-direction: column-reverse;
         }
 
@@ -59,14 +59,14 @@
             width: 100%;
             height: auto;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 display: none;
             }
 
             &-mobile {
                 display: none;
 
-                @media (max-width: 425px) {
+                @media (max-width: 480px) {
                     display: block;
                     width: 100%;
                     height: auto;
@@ -84,7 +84,7 @@
             margin-bottom: 22px;
             position: relative;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 max-width: 357px;
                 margin: 0 auto 26.87px auto;
                 padding: 20.59px 16.65px 19.91px 26px;
@@ -97,7 +97,7 @@
             left: 50%;
             transform: translate(-19%,-39%);
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 position: unset;
                 transform: none;
                 margin: 110px 8px;
@@ -112,7 +112,7 @@
             margin-bottom: 22px;
             line-height: 58px;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 font-size: 33.149px;
                 margin-bottom: 8.5px;
                 line-height: 33.149px;
@@ -126,7 +126,7 @@
             font-weight: 400;
             line-height: normal;
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 font-size: 15.832px;
             }
         }
@@ -156,7 +156,7 @@
                 color: #101010;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 width: 227px;
                 height: 60.766px;
                 padding: 13.271px 36.32px;
@@ -177,7 +177,7 @@
         border-radius: 50%;
         overflow: clip;
 
-        @media (max-width: 425px) {;
+        @media (max-width: 480px) {;
             bottom: 220px;
             left: 50%;
             right: unset;
